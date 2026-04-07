@@ -1,7 +1,11 @@
 aid: allegheny-technologies
-url: https://raw.githubusercontent.com/api-evangelist/allegheny-technologies/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/allegheny-technologies/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.allegheny-technologies.com
+description: >-
+  Allegheny Technologies is a producer of specialty materials and complex components
+  used in aerospace, defense, energy, medical, and other high-performance markets.
