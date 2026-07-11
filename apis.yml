@@ -16,6 +16,8 @@ description: >-
   chain integrations with aerospace OEM customers including Boeing and Airbus.
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/allegheny-technologies-domain-security.yml
   - type: Website
     url: https://www.atimaterials.com
   - type: InvestorRelations
