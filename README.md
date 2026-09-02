@@ -68,9 +68,15 @@ Allegheny Technologies Incorporated (ATI) is an American producer of specialty m
 
 ATI serves aerospace and defense (over 50% of sales), oil and gas, chemical process industry, electrical energy, and medical markets. The company generates approximately $4.6 billion in annual revenue and is listed on the NYSE under the ticker ATI.
 
-As a specialty materials manufacturer focused on advanced metals production, ATI does not maintain a public developer API program, but engages in EDI-based supply chain integrations with aerospace OEM customers.
+As a specialty materials manufacturer, ATI maintains no public developer API program. Probed on 2026-09-01: no developer portal, no API reference, no OpenAPI, AsyncAPI, GraphQL or WSDL contract, no SDK on any public package registry and no GitHub organization. The host named `api.atimaterials.com` resolves but serves the stock Apache "It works!" page and returns Tomcat 404s beneath it. ATI's only credentialed digital surfaces are My ATI, a customer and supplier extranet behind a logon form, and a third-party sourcing platform linked from the supplier self-service page; customer onboarding itself is published as PDF forms to email to a sales contact. See `well-known/allegheny-technologies-well-known.yml` for the full probe record.
 
 ## Links
 
 - [Website](https://www.atimaterials.com)
+- [Newsroom](https://www.atimaterials.com/newsroom/Pages/default.aspx)
 - [Investor Relations](https://ir.atimaterials.com)
+- [Customer Information](https://www.atimaterials.com/aboutati/Pages/Customer.aspx)
+- [Supplier Information](https://www.atimaterials.com/aboutati/Pages/suppliers.aspx)
+- [My ATI extranet](https://myati.atimaterials.com) (login required)
+- [Terms & Conditions](https://www.atimaterials.com/Pages/atitermsandconditions.aspx)
+- [Privacy Policy](https://www.atimaterials.com/Pages/atiprivacypolicy.aspx)

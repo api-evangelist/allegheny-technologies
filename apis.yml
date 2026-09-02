@@ -26,27 +26,45 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/allegheny-technologies.png
 url: >-
   https://raw.githubusercontent.com/api-evangelist/allegheny-technologies/refs/heads/main/apis.yml
-modified: '2026-04-19'
+created: '2026-04-19'
+modified: '2026-09-01'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
 description: >-
-  Allegheny Technologies Incorporated (ATI) is an American producer of
-  specialty materials headquartered in Dallas, Texas. ATI produces metals
-  including titanium and titanium alloys, nickel-based alloys and superalloys,
-  stainless and specialty steels, zirconium, hafnium, niobium, tungsten
-  materials, forgings, and castings. The company serves aerospace and defense
-  (over 50% of sales), oil and gas, chemical process industry, electrical
-  energy, and medical markets. ATI generates approximately $4.6 billion in
-  annual revenue and is listed on the NYSE (ticker: ATI). As a specialty
-  materials manufacturer focused on advanced metals production, ATI does not
-  maintain a public developer API program, but engages in EDI-based supply
-  chain integrations with aerospace OEM customers including Boeing and Airbus.
+  Allegheny Technologies Incorporated, which trades and brands itself as ATI Inc., is an American
+  producer of specialty materials and components headquartered in Dallas, Texas and listed on the
+  NYSE under the ticker ATI. ATI melts, forges, rolls, machines and additively manufactures
+  titanium and titanium alloys, nickel-based alloys and superalloys, stainless and specialty
+  steels, zirconium, hafnium, niobium and tungsten materials, plus forgings and castings. It
+  serves aerospace and defense — over half of sales — along with oil and gas, chemical and
+  hydrocarbon processing, power generation, medical and electronics markets, on roughly $4.6
+  billion in annual revenue. ATI is a materials manufacturer rather than a software company and
+  publishes no public API: as of 2026-09-01 probing found no developer portal, no API reference,
+  no OpenAPI, AsyncAPI, GraphQL or WSDL contract, no SDK on any public package registry and no
+  GitHub organization. The only credentialed digital surfaces are My ATI, a customer and supplier
+  extranet behind a logon form, and a third-party sourcing platform linked from the supplier
+  self-service page; customer onboarding itself is documented as PDF forms emailed to a sales
+  contact.
 apis: []
 common:
-  - type: DomainSecurity
-    url: security/allegheny-technologies-domain-security.yml
   - type: Website
     url: https://www.atimaterials.com
+  - type: Blog
+    url: https://www.atimaterials.com/newsroom/Pages/default.aspx
+  - type: TermsOfService
+    url: https://www.atimaterials.com/Pages/atitermsandconditions.aspx
+  - type: PrivacyPolicy
+    url: https://www.atimaterials.com/Pages/atiprivacypolicy.aspx
   - type: InvestorRelations
     url: https://ir.atimaterials.com
+  - type: CustomerPortal
+    url: https://myati.atimaterials.com
+  - type: LLMsTxt
+    url: llms/allegheny-technologies-llms.txt
+  - type: DomainSecurity
+    url: security/allegheny-technologies-domain-security.yml
 tags:
   - Specialty Materials
   - Aerospace
@@ -55,3 +73,53 @@ tags:
   - Manufacturing
   - Metals
   - Fortune 500
+x-pointer-liveness:
+  checked: '2026-09-01'
+  note: >-
+    Every common[] URL above was fetched with a browser User-Agent on 2026-09-01 and the status
+    recorded. ir.atimaterials.com answers 403 with a Cloudflare "Just a moment..." interstitial —
+    a bot challenge, not a dead page; the Q4 Inc investor site demonstrably exists and only our
+    crawler was turned away, so the pointer stands.
+  results:
+    - url: https://www.atimaterials.com
+      status: 200
+    - url: https://www.atimaterials.com/newsroom/Pages/default.aspx
+      status: 200
+    - url: https://www.atimaterials.com/Pages/atitermsandconditions.aspx
+      status: 200
+    - url: https://www.atimaterials.com/Pages/atiprivacypolicy.aspx
+      status: 200
+    - url: https://ir.atimaterials.com
+      status: 403
+      note: Cloudflare bot challenge — live, not dead
+    - url: https://myati.atimaterials.com
+      status: 200
+      note: redirects to /Extranet/Administration/wfrmLogon.aspx — gated extranet
+x-enrichment:
+  date: '2026-09-01'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    ATI melts and forges titanium and superalloys for jet engines; its whole public web estate is a
+    SharePoint 2013 marketing site whose only machine-shaped surfaces are alloy-grade pages, safety
+    data sheets and raw-material surcharge schedules, and the one host actually named api —
+    api.atimaterials.com — resolves but serves the stock Apache "It works!" page dated 2007 with
+    Tomcat 404s on every path under it.
+  evidence:
+    - url: https://api.atimaterials.com/openapi.json
+      status: 404
+    - url: https://api.atimaterials.com/
+      status: 200
+    - url: https://www.atimaterials.com/llms.txt
+      status: 404
+    - url: https://www.atimaterials.com/.well-known/allegheny-technologies-negative-control-7f3ab91c.json
+      status: 200
+    - url: https://myati.atimaterials.com/
+      status: 200
+    - url: https://www.atimaterials.com/.well-known/security.txt
+      status: 500
+  checked: '2026-09-01'

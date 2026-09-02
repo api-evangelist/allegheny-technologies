@@ -1,0 +1,116 @@
+generated: '2026-09-01'
+method: probed
+source: live HTTP probes of every ATI host reachable from apis.yml and the atimaterials.com sitemap
+note: >-
+  Recorded absence. Every named /.well-known/ path was probed on all three ATI hosts and NOTHING was
+  served. No WellKnown or SecurityTxt pointer is emitted for this repo, because there is no document
+  to point at. www.atimaterials.com is a SharePoint 2013 site that answers HTTP 200 with an ~18KB
+  SharePoint error page for EVERY unknown path — a soft-404 catch-all — so the 200s below are NOT
+  hits and must never be promoted into documents. The negative control confirms it.
+hit_count: 0
+hosts:
+  - host: https://www.atimaterials.com
+    server: Microsoft SharePoint (robots.txt discloses /_layouts/, /_vti_bin/, /_catalogs/)
+    soft_404_control:
+      path: /.well-known/allegheny-technologies-negative-control-7f3ab91c.json
+      status: 200
+      bytes: 18235
+      content_type: text/html; charset=utf-8
+      body: SharePoint "Error" page (<meta name="GENERATOR" content="Microsoft SharePoint">)
+      result: failed
+      means: >-
+        A path that cannot exist returned 200 with an HTML error page, so every 200 on this host is a
+        soft 404. All .json probes below returned the same ~18KB SharePoint error body.
+    documents:
+      - path: /.well-known/security.txt
+        status: 500
+      - path: /.well-known/openid-configuration
+        status: 500
+      - path: /.well-known/oauth-authorization-server
+        status: 500
+      - path: /.well-known/oauth-protected-resource
+        status: 500
+      - path: /.well-known/api-catalog
+        status: 500
+      - path: /.well-known/api-catalog.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18155 bytes, not a document
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18151 bytes, not a document
+      - path: /.well-known/aauth-resource.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18161 bytes; no issuer, no jwks_uri, not JSON
+      - path: /.well-known/ucp.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18137 bytes, not a document
+      - path: /.well-known/acp.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18137 bytes, not a document
+      - path: /.well-known/agent-card.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18153 bytes; rejected, no agent card written
+      - path: /.well-known/agent.json
+        status: 200
+        note: soft-404 — SharePoint error HTML, 18141 bytes; rejected, no agent card written
+  - host: https://myati.atimaterials.com
+    server: ASP.NET extranet; / redirects to /Extranet/Administration/wfrmLogon.aspx
+    soft_404_control:
+      path: /.well-known/allegheny-technologies-negative-control-7f3ab91c.json
+      status: 404
+      result: passed
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://api.atimaterials.com
+    server: >-
+      Apache fronting Tomcat. Resolves (207.235.75.6) and answers, but / returns the stock Apache
+      "It works!" page with a Last-Modified of 11 Jun 2007; every other path returns a Tomcat
+      "HTTP Status 404 - Not Found". No published contract, no documentation, no reference.
+    soft_404_control:
+      path: /.well-known/allegheny-technologies-negative-control-7f3ab91c.json
+      status: 404
+      result: passed
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/aauth-resource.json
+        status: 404
+      - path: /.well-known/ucp.json
+        status: 404
+      - path: /.well-known/acp.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
