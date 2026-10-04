@@ -1,5 +1,5 @@
 aid: allegheny-technologies
-name: "Allegheny Technologies Incorporated"
+name: ATI
 deliveryModel:
   model: unknown
   open_source: false
@@ -123,3 +123,4 @@ x-coverage:
     - url: https://www.atimaterials.com/.well-known/security.txt
       status: 500
   checked: '2026-09-01'
+x-legal-name: Allegheny Technologies Incorporated
