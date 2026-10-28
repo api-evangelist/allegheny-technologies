@@ -1,4 +1,4 @@
-# Allegheny Technologies
+# ATI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,19 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Allegheny Technologies Incorporated (ATI) is an American producer of specialty materials headquartered in Dallas, Texas. ATI produces metals including titanium and titanium alloys, nickel-based alloys and superalloys, stainless and specialty steels, zirconium, hafnium, niobium, tungsten materials, forgings, and castings.
+Allegheny Technologies Incorporated, which trades and brands itself as ATI Inc., is an American producer of specialty materials and components headquartered in Dallas, Texas and listed on the NYSE under the ticker ATI. ATI melts, forges, rolls, machines and additively manufactures titanium and titanium alloys, nickel-based alloys and superalloys, stainless and specialty steels, zirconium, hafnium, niobium and tungsten materials, plus forgings and castings. It serves aerospace and defense — over half of sales — along with oil and gas, chemical and hydrocarbon processing, power generation, medical and electronics markets, on roughly $4.6 billion in annual revenue. ATI is a materials manufacturer rather than a software company and publishes no public API: as of 2026-09-01 probing found no developer portal, no API reference, no OpenAPI, AsyncAPI, GraphQL or WSDL contract, no SDK on any public package registry and no GitHub organization. The only credentialed digital surfaces are My ATI, a customer and supplier extranet behind a logon form, and a third-party sourcing platform linked from the supplier self-service page; customer onboarding itself is documented as PDF forms emailed to a sales contact.
 
-ATI serves aerospace and defense (over 50% of sales), oil and gas, chemical process industry, electrical energy, and medical markets. The company generates approximately $4.6 billion in annual revenue and is listed on the NYSE under the ticker ATI.
+**Areas:** Specialty Materials · Aerospace · Defense · Titanium · Manufacturing · Metals · Fortune 500
 
-As a specialty materials manufacturer, ATI maintains no public developer API program. Probed on 2026-09-01: no developer portal, no API reference, no OpenAPI, AsyncAPI, GraphQL or WSDL contract, no SDK on any public package registry and no GitHub organization. The host named `api.atimaterials.com` resolves but serves the stock Apache "It works!" page and returns Tomcat 404s beneath it. ATI's only credentialed digital surfaces are My ATI, a customer and supplier extranet behind a logon form, and a third-party sourcing platform linked from the supplier self-service page; customer onboarding itself is published as PDF forms to email to a sales contact. See `well-known/allegheny-technologies-well-known.yml` for the full probe record.
+## ATI on APIs.io
 
-## Links
+Everything profiled for ATI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/allegheny-technologies/](https://apis.io/providers/allegheny-technologies/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Allegheny Technologies Domain Security](https://apis.io/security/allegheny-technologies/allegheny-technologies-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.atimaterials.com)
-- [Newsroom](https://www.atimaterials.com/newsroom/Pages/default.aspx)
-- [Investor Relations](https://ir.atimaterials.com)
-- [Customer Information](https://www.atimaterials.com/aboutati/Pages/Customer.aspx)
-- [Supplier Information](https://www.atimaterials.com/aboutati/Pages/suppliers.aspx)
-- [My ATI extranet](https://myati.atimaterials.com) (login required)
-- [Terms & Conditions](https://www.atimaterials.com/Pages/atitermsandconditions.aspx)
-- [Privacy Policy](https://www.atimaterials.com/Pages/atiprivacypolicy.aspx)
+- [Blog](https://www.atimaterials.com/newsroom/Pages/default.aspx)
+- [Terms of service](https://www.atimaterials.com/Pages/atitermsandconditions.aspx)
+- [Privacy policy](https://www.atimaterials.com/Pages/atiprivacypolicy.aspx)
+
+## API Evangelist rating
+
+**Kin Score 9.3** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/allegheny-technologies/](https://apis.io/providers/allegheny-technologies/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ATI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/allegheny-technologies/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
